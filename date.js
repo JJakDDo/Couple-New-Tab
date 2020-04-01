@@ -27,6 +27,7 @@ function parseStr(date){
     return str;
 }
 
+//각 기념일 별로 날짜구하기
 function getDates(date){
     //각 기념일 별로 날짜 구하기 NNN일
     for(let i=1;i<8;i++){
@@ -46,7 +47,9 @@ function getDates(date){
         data.date = parseStr(data.date);
     })
 }
-function getNumberOfDays(currentValue){
+
+//기념일 남은 일수 구하기
+function getRemainingDays(currentValue, isAnniversary){
     //오늘 날짜 가져오기
     const today = new Date();
     //유저가 입력한 날짜를 Date 객체로 변환
@@ -56,7 +59,9 @@ function getNumberOfDays(currentValue){
     const diff = today - newCurrentValue;
     const currDay = 24 * 60 * 60 * 1000;
     
-    return parseInt(diff/currDay) + 1;
+    if(isAnniversary)
+        return -(parseInt(diff/currDay) - 1);
+    else return parseInt(diff/currDay) + 1;
 }
 
 function askForDay(){
@@ -74,7 +79,7 @@ function showToday(text){
     dateForm.classList.remove(SHOW);
     currentDay.classList.add(SHOW);
     
-    currentDay.innerText = `우리 커플 ${getNumberOfDays(text)} 일 째!`;
+    currentDay.innerText = `우리 커플 ${getRemainingDays(text, false)} 일 째!`;
 }
 //기념일들 로컬스토리지에 저장하기
 function saveAnniversary(){
