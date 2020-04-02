@@ -1,3 +1,9 @@
+@import url(//fonts.googleapis.com/earlyaccess/hanna.css);
+
+body{
+    font-family: 'Hanna', sans-serif;
+}
+
 .date,
 .currentDay,
 .formAnni{
@@ -6,4 +12,54 @@
 
 .showing {
     display : block;
+}
+
+.css-dateForm{
+    position: absolute;
+    width: 500px;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.date p{
+    text-align: center;
+    font-size: 65px;
+}
+
+.date input{
+    position: relative;
+    display: inline-block;
+    font-size: 15px;
+    box-sizing: border-box;
+    font-family: 'Hanna', sans-serif;
+}
+
+input[type="date"]{
+    background: #FFdcFF;
+    width: 340px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 0 25px;
+    border-radius: 25px 0 0 25px;
+}
+
+input[type="date"]::-webkit-inner-spin-button{
+    display: none;
+    -webkit-appearance: none;
+}
+
+input[type="submit"]{
+    position: relative;
+    width: 150px;
+    height: 50px;
+    border-radius: 0 25px 25px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #FFAAFF;
 }
