@@ -1,11 +1,11 @@
-@import url(//fonts.googleapis.com/earlyaccess/hanna.css);
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 
 body{
-    font-family: 'Hanna', sans-serif;
+    font-family: 'Black Han Sans', sans-serif;
+    background: #ff3772;
 }
 
 .date,
-.currentDay,
 .formAnni{
     display : none;
 }
@@ -28,6 +28,30 @@ body{
 .date p{
     text-align: center;
     font-size: 65px;
+    color: #fff;
+}
+
+.css-currentDay{
+    position: absolute;
+    left: 50%;
+    top:30%;
+    transform: translate(-50%, -50%);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.css-currentDay h1{
+    font-weight: lighter;
+    font-size: 100px;
+    margin-bottom: -10px;
+    color: #fff;
+}
+
+.css-currentDay p{
+    font-weight: lighter;
+    font-size: 50px;
+    color: #fff;
 }
 
 .date input{
@@ -35,7 +59,7 @@ body{
     display: inline-block;
     font-size: 15px;
     box-sizing: border-box;
-    font-family: 'Hanna', sans-serif;
+    font-family: 'Black Han Sans', sans-serif;
 }
 
 input[type="date"]{
@@ -62,4 +86,59 @@ input[type="submit"]{
     outline: none;
     cursor: pointer;
     background: #FFAAFF;
+    text-align: center;
+}
+
+ul{
+    position: absolute;
+    width: 450px;
+    margin: 180px auto 0;
+    padding: 10px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,.1);
+    box-shadow: inset 0 0 15px rgba(0,0,0,.2);
+    border-radius: 5px;
+}
+
+ul li{
+    display: flex;
+    height: 70px;
+    background: rgba(255, 255, 255, .1);
+    padding: 5px; 20px;
+    color: #fff;
+    margin: 5px 0;
+    transition: .5s;
+}
+
+ul li:nth-child(1){
+    background: rgba(255, 255, 255, .6);
+    
+}
+ul li:nth-child(2){
+    background: rgba(255, 255, 255, .4);
+    
+}
+ul li:nth-child(3){
+    background: rgba(255, 255, 255, .2);
+    
+}
+ul li span:nth-child(1){
+    width: 200px;
+    font-size: 50px;
+    margin-top: -5px;
+}
+ul li span:nth-child(2){
+    width: 300px;
+    margin-left: -190px;
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: ligher;
+}
+ul li span:nth-child(3){
+    width: 150px;
+    font-size: 30px;
+}
+ul li:hover{
+    transform: scale(1.06);
+    background: #ff3772;
 }

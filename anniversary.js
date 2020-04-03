@@ -1,21 +1,31 @@
 const ulAnniversary = document.querySelector(".js-anniversary");
 const formAnniversary = document.querySelector(".js-formAnni");
 
+let count = 0;
+
 function displayAnniversary(date, anniversary, day){
     const temp = new Date();
     //지난 기념일은 스킵
-    if(parseDate(date) >= temp){
+    if(parseDate(date) >= temp && count < 7){
         const li = document.createElement("li");
-        const span = document.createElement("span");
+        const spanAnniversary = document.createElement("span");
+        const spanDate = document.createElement("span");
+        const spanRemains = document.createElement("span");
 
         const tempDate = date.split("-");
-        const text = `${tempDate[0]} 년 ${tempDate[1]} 월 ${tempDate[2]} 일 ${day} ${getRemainingDays(date, true)}일 남음`;
+        spanDate.innerText = `${tempDate[0]} 년 ${tempDate[1]} 월 ${tempDate[2]} 일 ${day}`;
+        spanDate.classList.add("listDate");
+        spanAnniversary.innerText = anniversary;
+        spanAnniversary.classList.add("listAnniversary");
+        spanRemains.innerText = `D - ${getRemainingDays(date, true)}`;
+        spanRemains.classList.add("listRemains");
 
-        span.innerText = text;
+        li.appendChild(spanAnniversary);
+        li.appendChild(spanDate);
+        li.appendChild(spanRemains);
 
-        li.appendChild(span);
-
-        ulAnniversary.appendChild(li);            
+        ulAnniversary.appendChild(li);
+        count++;
     }
 }
 

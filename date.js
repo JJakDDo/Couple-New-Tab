@@ -79,7 +79,8 @@ function showToday(text){
     dateForm.classList.remove(SHOW);
     currentDay.classList.add(SHOW);
     
-    currentDay.innerText = `우리 커플 ${getRemainingDays(text, false)} 일 째!`;
+    currentDay.querySelector("h1").innerText = `우리 커플`;
+    currentDay.querySelector("p").innerText = `${getRemainingDays(text, false)} 일 째`;
 }
 //기념일들 로컬스토리지에 저장하기
 function saveAnniversary(){
