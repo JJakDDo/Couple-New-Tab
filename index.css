@@ -33,12 +33,14 @@ body{
 
 .css-currentDay{
     position: absolute;
+    width: 100%;
     left: 50%;
     top:30%;
     transform: translate(-50%, -50%);
     display:flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .css-currentDay h1{
@@ -151,4 +153,16 @@ ul li:hover{
 .weather span{
     font-size: 20px;
     font-weight: lighter;
+}
+
+@media screen and (max-width: 1268px){
+    .css-currentDay{
+        top: 20%;
+    }
+    ul{
+        width: 90%;
+        left: 50%;
+        top:48%;
+        transform: translate(-50%, -50%);
+    }
 }
