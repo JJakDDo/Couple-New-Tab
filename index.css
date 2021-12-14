@@ -19,18 +19,19 @@ body{
 
 .css-dateForm{
     position: absolute;
-    width: 300px;
+    width: 450px;
     left: 50%;
     top: 30%;
     transform: translate(-50%, -50%);
     display:flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .date p{
     text-align: center;
-    font-size: 65px;
+    font-size: 45px;
 }
 
 .css-currentDay{
@@ -96,7 +97,7 @@ input[type="submit"]{
 ul{
     position: absolute;
     width: 300px;
-    margin: 100px auto 0;
+    margin: 200px auto 0;
     padding: 10px;
     box-sizing: border-box;
     background: rgba(0,0,0,.1);

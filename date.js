@@ -30,12 +30,12 @@ function parseStr(date){
 //각 기념일 별로 날짜구하기
 function getDates(date){
     //각 기념일 별로 날짜 구하기 NNN일
-    for(let i=1;i<8;i++){
+    for(let i=1;i<20;i++){
         const temp = new Date(date.getFullYear(), date.getMonth(), date.getDate() + (i * 100) - 1);
         listAnniversary.push({"date":temp, "day":day[temp.getDay()], "anniversary":i*100+"일"});        
     }
     //각 기념일 별로 날짜 구하기 N주년
-    for(let i=1;i<4;i++){
+    for(let i=1;i<6;i++){
         const temp = new Date(date.getFullYear() + i, date.getMonth(), date.getDate());
         listAnniversary.push({"date":temp, "day":day[temp.getDay()], "anniversary":i+"주년"});        
     }
